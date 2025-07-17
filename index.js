@@ -58,10 +58,16 @@ client.on('messageCreate', async (message) => {
     const response = await openai.responses.create({
         prompt: {
             "id": "pmpt_6876d1b03edc8193ad6b5684bae0af8d0820aa045d9844f4",
-            "version": "7"
+            "version": "9",
+            "variables": {
+                "general_preferences": "example general_preferences"
+            }
         },
         previous_response_id: responseArray.length > 0 ? responseArray[responseArray.length - 1].id : undefined,
-        model: 'gpt-4o-mini',
+        input: message.content,
+        store: true,
+        reasoning: {},
+        max_output_tokens: 2048,
         tools: [
             {
             type: 'mcp',
@@ -77,8 +83,6 @@ client.on('messageCreate', async (message) => {
             require_approval: 'never'
             }
         ],
-        input: message.content,
-        store: true,
     })
     .catch((error) => console.error('Error from OpenAI:', error));
 
