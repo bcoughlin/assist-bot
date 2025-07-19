@@ -6,10 +6,12 @@
 app = 'assist-bot'
 primary_region = 'lax'
 
-[env]
-  PIPEDREAM_ENVIRONMENT = production
-
 [build]
+
+[deploy]
+
+[env]
+  PIPEDREAM_ENVIRONMENT = "production"
 
 [http_service]
   internal_port = 3000
@@ -20,7 +22,5 @@ primary_region = 'lax'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
-  memory_mb = 1024
+  size = "shared-cpu-2x"
+  memory = "2gb"
