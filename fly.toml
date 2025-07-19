@@ -6,6 +6,9 @@
 app = 'assist-bot'
 primary_region = 'lax'
 
+[env]
+  PIPEDREAM_ENVIRONMENT = production
+
 [build]
 
 [http_service]
