@@ -1,0 +1,4 @@
+discord.py==2.3.2
+openai==1.51.2
+python-dotenv==1.0.0
+modal==0.64.24

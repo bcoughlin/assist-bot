@@ -1,20 +1,12 @@
 {
-  "name": "assist-bot",
+  "name": "discord-poe-poc",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
+  "main": "main.py",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "python main.py"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@pipedream/sdk": "^1.7.0",
-    "discord.js": "^14.21.0",
-    "dotenv": "^17.2.0",
-    "openai": "^5.10.0"
-  }
+  "keywords": ["discord", "poe", "modal", "bot"],
+  "author": "Brad Coughlin",
+  "license": "MIT",
+  "description": "Discord bot integrated with Poe API, deployed on Modal"
 }
