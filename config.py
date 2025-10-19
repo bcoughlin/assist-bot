@@ -14,7 +14,7 @@ class Config:
     # Poe API settings
     POE_API_KEY = os.environ.get("POE_API_KEY", "")
     POE_BASE_URL = "https://api.poe.com/v1"
-    DEFAULT_MODEL = os.environ.get("DEFAULT_MODEL", "Claude-Sonnet-4")
+    DEFAULT_MODEL = os.environ.get("DEFAULT_MODEL", "LastzAiBeta")
     
     # Bot behavior settings
     IGNORE_PREFIXES = ["!", "?", "/"]
@@ -49,6 +49,7 @@ class Config:
 
 # Available Poe models for reference
 AVAILABLE_MODELS = [
+    "LastzAiBeta",  # Your custom Poe bot
     "Claude-Sonnet-4",
     "Claude-Opus-4.1", 
     "GPT-4.1",

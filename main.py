@@ -12,7 +12,7 @@ except ImportError:
     class Config:
         MODAL_APP_NAME = "discord-poe-poc"
         POE_BASE_URL = "https://api.poe.com/v1"
-        DEFAULT_MODEL = "Claude-Sonnet-4"
+        DEFAULT_MODEL = "LastzAiBeta"  # Your custom Poe bot
         COMMAND_PREFIX = "!"
         IGNORE_PREFIXES = ["!", "?", "/"]
         ALLOWED_CHANNELS = ["663843965325410319"]
@@ -33,8 +33,8 @@ except ImportError:
             return errors
     
     AVAILABLE_MODELS = [
-        "Claude-Sonnet-4", "Claude-Opus-4.1", "GPT-4.1", "Gemini-2.5-Pro", 
-        "Llama-3.1-405B", "Grok-4"
+        "LastzAiBeta", "Claude-Sonnet-4", "Claude-Opus-4.1", "GPT-4.1", 
+        "Gemini-2.5-Pro", "Llama-3.1-405B", "Grok-4"
     ]
 
 # Modal app configuration
@@ -109,7 +109,7 @@ def run_discord_bot():
     # Load configuration from environment
     allowed_channels_str = os.environ.get("ALLOWED_CHANNELS", ",".join(Config.ALLOWED_CHANNELS))
     allowed_channels = [ch.strip() for ch in allowed_channels_str.split(",") if ch.strip()]
-    current_model = os.environ.get("DEFAULT_MODEL", Config.DEFAULT_MODEL)
+    current_model = os.environ.get("DEFAULT_MODEL", "LastzAiBeta")  # Use your custom Poe bot
     system_message = os.environ.get("SYSTEM_MESSAGE", Config.SYSTEM_MESSAGE)
     
     @bot.event
